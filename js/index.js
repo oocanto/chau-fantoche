@@ -17,6 +17,7 @@ function makeContdown(results) {
 		// Get today's date and time
 		var now = new Date().getTime();
 		var currentDate = new Date(results.currentDateTime);
+		var htmlText = null;
 
 		// Find the distance between now and the count down date
 		var distance = countDownDate - now;
@@ -35,8 +36,12 @@ function makeContdown(results) {
 		// If the count down is finished, write some text
 		if (distance < 0) {
 			clearInterval(x);
-			$('#txtTime').text('Tu tiempo ha expirado, fantoche.');
+			htmlText = 'Tu tiempo ha expirado, fantoche.';
 		}
+
+		// Display the result in the element with id="demo"
+		$('#txtTime').html(htmlText);
+
 	}, 1000);
 }
 
