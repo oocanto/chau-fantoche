@@ -1,4 +1,4 @@
-var TIME_URL = 'https://worldclockapi.com/api/json/utc/now';
+var TIME_URL = 'http://worldclockapi.com/api/json/utc/now';
 var DATE_END_OF_FANTOCHE = '2019-12-10T00:00:00';
 
 function initialize() {
