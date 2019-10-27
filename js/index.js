@@ -27,7 +27,7 @@ function makeContdown(results) {
 		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-		var htmlText = 'Faltan ' + (days + ' d&iacute;as, ' + hours + ' horas, ' + minutes + ' minutos, ' + seconds + ' segundos ') + 'para que te vayas, fantoche.';
+		var htmlText = 'Faltan ' + (days + ' d&iacute;as, ' + hours + ' horas, ' + minutes + ' minutos, ' + seconds + ' segundos ') + 'para que te vayas, Fantoche!!!';
 
 		// Display the result in the element with id="demo"
 		$('#txtTime').html(htmlText);
