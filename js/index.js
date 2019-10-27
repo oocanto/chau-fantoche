@@ -17,6 +17,7 @@ function makeContdown(results) {
 		// Get today's date and time
 		var now = new Date().getTime();
 		var currentDate = new Date(results.currentDateTime);
+		var htmlText = null;
 
 		// Find the distance between now and the count down date
 		var distance = countDownDate - now;
@@ -27,16 +28,17 @@ function makeContdown(results) {
 		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-		var htmlText = 'Faltan ' + (days + ' d&iacute;as, ' + hours + ' horas, ' + minutes + ' minutos, ' + seconds + ' segundos ') + 'para que te vayas, fantoche.';
-
-		// Display the result in the element with id="demo"
-		$('#txtTime').html(htmlText);
+		htmlText = 'Faltan ' + (days + ' d&iacute;a(s), ' + hours + ' hora(s), ' + minutes + ' minuto(s), ' + seconds + ' segundo(s)') + ' para que te vayas, fantoche.';
 
 		// If the count down is finished, write some text
 		if (distance < 0) {
 			clearInterval(x);
-			$('#txtTime').text('Tu tiempo ha expirado, fantoche.');
+			htmlText = 'Tu tiempo ha expirado, fantoche.';
 		}
+
+		// Display the result in the element with id="demo"
+		$('#txtTime').html(htmlText);
+
 	}, 1000);
 }
 
